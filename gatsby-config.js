@@ -30,5 +30,24 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "GCMS",
+        // This is field under which it's accessible
+        fieldName: "gcms",
+        // Url to query from
+        url: "https://api-euwest.graphcms.com/v1/cjxvs7xiy1d6a01clfck3ug2b/master",
+      },
+    },
+
+    {
+      resolve: `@moltin/gatsby-source-moltin`,
+      options: {
+        client_id: 'uZ5VoiYvYm2euQBlIpRoYYKSkFmAlXryoBXj8dQpnO'
+      },
+    },
   ],
 }
